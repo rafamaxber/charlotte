@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": false,
   "dependencies": {
+    "flow-bin": "^0.64.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-helmet": "^5.2.0",
@@ -13,6 +14,7 @@
   },
   "scripts": {
     "start": "concurrently \" npm run dev\" \" npm run storybook\"",
+    "flow": "flow",
     "dev": "react-scripts start --env=.env.development.local",
     "test": "react-scripts test --env=jsdom",
     "test:tdd": "npm run lint && npm test",
