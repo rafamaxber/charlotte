@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import LoadableWrapper from './components/Loading/Loadable';
 import { 
   BrowserRouter as Router,
-  Route,
-  Link } from 'react-router-dom';
+  Route 
+} from 'react-router-dom';
 
 const Home = LoadableWrapper({
   loader: () => import(/*webpackChunkName: "Home"*/'./containers/Home/Home.js'),
