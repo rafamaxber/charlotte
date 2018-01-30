@@ -1,5 +1,6 @@
 {
     "name": "Charlotte",
+    "short_name": "Charlotte",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -14,5 +15,7 @@
     ],
     "theme_color": "#f98100",
     "background_color": "#f98100",
-    "display": "standalone"
+    "display": "standalone",
+    "author": "Rafael Bernardo",
+    "start_url": "/?utm_source=homescreen"
 }
