@@ -1,6 +1,6 @@
 {
   "name": "charlotte",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "private": false,
   "dependencies": {
     "flow-bin": "^0.64.0",
