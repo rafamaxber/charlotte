@@ -5,7 +5,7 @@ branches:
   only:
     - master
 script:
-  - npm run test:coverage
+  - yarn test:coverage
 deploy:
   provider: heroku
   api_key: "$HEROKU_APP_ID"
