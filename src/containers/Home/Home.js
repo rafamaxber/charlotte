@@ -1,9 +1,11 @@
 import React from 'react';
+import Layout from '../../components/Layout/Layout';
+import HeaderNavigation from '../../components/HeaderNavigation/HeaderNavigation';
 
 const HomePage = () => (
-  <div className="App">
-    Home Page
-  </div>
+  <Layout>
+    <HeaderNavigation></HeaderNavigation>
+  </Layout>
 );
 
 export default HomePage;
