@@ -4,18 +4,20 @@
   "private": false,
   "dependencies": {
     "flow-bin": "^0.64.0",
+    "minireset.css": "^0.0.3",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-helmet": "^5.2.0",
     "react-loadable": "^4.0.5",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.13",
+    "storybook-router": "^0.3.2",
     "styled-components": "^2.1.2"
   },
   "scripts": {
     "start": "concurrently \" npm run dev\" \" npm run storybook\"",
     "flow": "flow",
-    "dev": "react-scripts start --env=.env.development.local",
+    "dev": "react-scripts start --env=development.local.env",
     "test": "react-scripts test --env=jsdom",
     "test:tdd": "npm run lint && npm test",
     "test:coverage": "npm test -- --coverage",
