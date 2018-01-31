@@ -4,6 +4,7 @@ import {
   BrowserRouter as Router,
   Route 
 } from 'react-router-dom';
+import 'minireset.css';
 
 const Home = LoadableWrapper({
   loader: () => import(/*webpackChunkName: "Home"*/'./containers/Home/Home.js'),
