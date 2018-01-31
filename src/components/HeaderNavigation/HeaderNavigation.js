@@ -21,14 +21,18 @@ const LinkTexts = [
 ];
 
 const Header = styled.header`
-  position: relative;
-  width: 100%;
-  max-width: 329px;
-  height: 23px;
-  left: 79px;
-  top: 30px;
-  display: flex;
-  justify-content: space-between;
+  display: none;
+  position: absolute;
+
+  @media (min-width: 570px) {
+    width: 100%;
+    max-width: 329px;
+    height: 23px;
+    justify-content: space-between;
+    display: flex;
+    left: 79px;
+    top: 30px;
+  }
 `;
 
 const StyledLink = styled(Link) `
