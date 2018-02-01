@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero Should match with snapshot 1`] = `
+<div
+  className="sc-bdVaJa jsknkD"
+>
+  <div
+    className="sc-bwzfXH kqucqH"
+  >
+    <img
+      className="sc-htpNat hjVsta"
+      src="crown.svg"
+    />
+    <div
+      className="sc-bxivhb eKbCDM"
+    >
+      Welcome to
+    </div>
+    <div
+      className="sc-ifAKCX geNkme"
+    >
+      Charlotte
+    </div>
+    <div
+      className="sc-bxivhb eKbCDM"
+    >
+      the queen city
+    </div>
+  </div>
+</div>
+`;
