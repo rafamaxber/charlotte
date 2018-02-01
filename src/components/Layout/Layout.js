@@ -7,6 +7,7 @@ const MainPage = styled.main`
   width: 100%;
   min-height: 600px;
   margin: 0 auto;
+  z-index: 0;
 `;
 
 export default ({ children }) => (
