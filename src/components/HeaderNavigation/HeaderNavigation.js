@@ -56,7 +56,7 @@ export default () => (
   <Header>
     {
       LinkTexts.map(item => (
-        <StyledLink to={item.link} active={item.status}>
+        <StyledLink to={item.link} key={item.text}>
           { item.text }
         </StyledLink>
       ))
