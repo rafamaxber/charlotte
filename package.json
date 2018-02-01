@@ -6,6 +6,7 @@
     "flow-bin": "^0.64.0",
     "minireset.css": "^0.0.3",
     "react": "^15.6.1",
+    "react-day-picker": "^7.0.7",
     "react-dom": "^15.6.1",
     "react-helmet": "^5.2.0",
     "react-loadable": "^4.0.5",
