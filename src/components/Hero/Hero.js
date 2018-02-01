@@ -4,7 +4,7 @@ import banner from '../../assets/hero.jpg';
 import crownwhite from '../../assets/crown.svg';
 
 const Hero = styled.div`
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 300px;
   left: 0px;
