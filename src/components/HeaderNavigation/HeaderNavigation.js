@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+// TODO: Implement hamburguer menu for mobile
+
 const LinkTexts = [
   { 
     text: 'The Queen city',
@@ -21,9 +23,6 @@ const LinkTexts = [
 ];
 
 const Header = styled.header`
-  display: none;
-  position: absolute;
-
   @media (min-width: 570px) {
     width: 100%;
     max-width: 329px;
@@ -33,6 +32,8 @@ const Header = styled.header`
     left: 79px;
     top: 30px;
   }
+  display: none;
+  position: absolute;
 `;
 
 const StyledLink = styled(Link) `
