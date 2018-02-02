@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 // TODO: Implement hamburguer menu for mobile
 
@@ -36,8 +35,9 @@ const Header = styled.header`
   position: absolute;
 `;
 
-const StyledLink = styled(Link) `
+const StyledLink = styled.a`
   font-family: 'Heebo', sans-serif;
+  position: relative;
   text-decoration: none;
   font-style: normal;
   font-weight: normal;
@@ -46,9 +46,23 @@ const StyledLink = styled(Link) `
   text-align: center;
   color: #FFFFFF;
   transition: 0.3s ease;
+  cursor: ${ props => props.active ? 'default' : 'pointer' };;
   text-shadow: ${ props => props.active ? '0px 4px 4px rgba(0, 0, 0, 0.25)' : 'none' };
-  &:hover {
-    text-decoration: underline;
+  &:after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #fff;
+    bottom: -4px;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    width: 0;
+    transition: .3s cubic-bezier(0.63, 0.23, 1, 1);
+  }
+  &:hover:after {
+    width: 100% ;
+    opacity: 1;
   }
 `;
 
@@ -56,7 +70,7 @@ export default () => (
   <Header>
     {
       LinkTexts.map(item => (
-        <StyledLink to={item.link} key={item.text}>
+        <StyledLink to={item.link} key={item.text} active={item.status}>
           { item.text }
         </StyledLink>
       ))
