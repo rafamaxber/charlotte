@@ -1,4 +1,5 @@
 import { configure } from '@storybook/react';
+import 'minireset.css';
 
 const req = require.context('../src/', true, /\.stories\.js$/)
 

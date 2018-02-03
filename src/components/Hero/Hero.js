@@ -14,10 +14,10 @@ const Hero = styled.div`
   background-image: url(${banner});
   background-size: 160%;
   z-index: -1;
-  background-attachment: fixed;
   @media (min-width: 600px) {
     background-size: cover;
     height: 600px;
+    margin-bottom: -160px;
   } 
 `;
 

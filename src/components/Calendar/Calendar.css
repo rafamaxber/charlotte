@@ -14,7 +14,7 @@
 }
 
 .DayPicker-Day {
-  padding: 11px 9px;
+  padding: 11px;
 }
 
 .DayPicker-NavBar {
@@ -28,6 +28,10 @@
 .DayPicker-WeekdaysRow {
   border-bottom: 2px solid #E3E3E3;
   padding: 10px 0;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside):hover {
+  background-color: transparent;
 }
 
 .Selectable .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
@@ -67,34 +71,35 @@
 
 .Selectable .DayPicker-Day--start {
   background-color: #79BD1A;
-  border-top-left-radius: 50% !important;
-  border-bottom-left-radius: 50% !important;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
 }
 
 .DayPicker-Week {
   border: 10px solid #fff;
 }
 
-.Selectable .DayPicker-Day--start {
-  border-top-left-radius: 50% !important;
-  border-bottom-left-radius: 50% !important;
-  background-color: transparent !important;
+.Selectable .DayPicker-Day.DayPicker-Day--start {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  background-color: transparent;
   z-index: 10;
-  color: #fff !important;
+  color: #fff;
 }
 
-.Selectable .DayPicker-Day--end {
-  border-top-right-radius: 50% !important;
-  border-bottom-right-radius: 50% !important;
-  background-color: transparent !important;
+.Selectable .DayPicker-Day.DayPicker-Day--end {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background-color: transparent;
   z-index: 10;
-  color: #79BD1A !important;
+  color: #79BD1A;
 }
 
-.Selectable .DayPicker-Day--end:after {
+.Selectable .DayPicker-Day.DayPicker-Day--end:after {
+
   content: "";
-  height: 91%;
-  width: 91%;
+  height: 100%;
+  width: 100%;
   border: 2px solid #79BD1A;
   position: absolute;
   background-color: #fff;
@@ -104,10 +109,10 @@
   z-index: -1;
 }
 
-.Selectable .DayPicker-Day--start:before {
+.Selectable .DayPicker-Day.DayPicker-Day--start:before {
   content: "";
-  border-top-left-radius: 50% !important;
-  border-bottom-left-radius: 50% !important;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
   background-color: #79BD1A;
   position: absolute;
   top: 0;
@@ -118,10 +123,10 @@
 }
 
 
-.Selectable .DayPicker-Day--end:before {
+.Selectable .DayPicker-Day.DayPicker-Day--end:before {
   content: "";
-  border-top-right-radius: 50% !important;
-  border-bottom-right-radius: 50% !important;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
   background-color: #79BD1A;
   position: absolute;
   top: 0;
