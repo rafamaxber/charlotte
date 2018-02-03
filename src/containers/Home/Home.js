@@ -9,6 +9,7 @@ const HomePage = () => (
     <HeaderNavigation></HeaderNavigation>
     <Hero></Hero>
     <BoxCalendar></BoxCalendar>
+    
   </Layout>
 );
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Calendar from '../Calendar/Calendar';
+import Button from '../Button/Button';
 
 const Box = styled.div`
   width: 838px;
@@ -47,7 +48,9 @@ const BoxDateValue = Text.extend`
   color: #B5B5B5;
 `;
 const WrapperBoxDate = styled.div`
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 `;
 const WrapperBoxCalendar = styled.div`
   position: relative;
@@ -85,6 +88,8 @@ export default () => (
               Choose a date
           </BoxDateValue>
         </BoxDate>
+
+        <Button typeBtn="default"></Button>
 
       </WrapperBoxDate>
       
