@@ -2,28 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import Calendar from '../Calendar/Calendar';
 import Button from '../Button/Button';
+import BoxTitle from '../BoxTitle/BoxTitle';
 
 const Box = styled.div`
   width: 838px;
-  height: 455px;
   margin: auto;
   background: #FFFFFF;
   box-shadow: 0px -40px 46px rgba(0, 0, 0, 0.332484);
   border-radius: 7px;
   position: relative;
-  padding: 60px 60px 0 60px;
-`;
-
-const BoxTitle = styled.div`
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  line-height: normal;
-  font-size: 22px;
-  text-align: center;
-  letter-spacing: 2.5px;
-  color: #000000;
-  display: block;
+  padding-right: 60px;
+  padding-left: 60px;
 `;
 
 const BoxDate = styled.div`
