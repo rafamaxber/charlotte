@@ -1,21 +1,24 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import starEmpty from '../../assets/star-outline.svg';
-import starFull from '../../assets/star-filled.svg';
+import Rating from 'react-rating';
+import starFullImage from '../../assets/star-filled.svg';
+import starEmptyImage from '../../assets/star-outline.svg';
 
 const WrapperFilter = styled.div`
   max-width: 300px;
 `;
-const FilterTitle = styled.div`
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  line-height: normal;
-  font-size: 22px;
-  letter-spacing: 2.5px;
-  color: #000000;
-  margin-bottom: 39px;
+
+const StarFull = styled.img.attrs({
+  src: starFullImage,
+})`
+  width: 26px;
+  margin-right: 4px;
 `;
+
+const StarEmpty = StarFull.extend.attrs({
+  src: starEmptyImage,
+})``;
+
 const TextSmall = styled.div`
   font-family: 'Heebo', sans-serif;
   font-style: normal;
@@ -23,11 +26,9 @@ const TextSmall = styled.div`
   line-height: normal;
   font-size: 12.8px;
   color: #B5B5B5;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 `;
-const StartImg = styled.img`
-  width: 60px;
-`;
+
 const FilterRate = styled.div``;
 
 export default class WrapperFilterRate extends Component {
@@ -45,25 +46,23 @@ export default class WrapperFilterRate extends Component {
     }
   }
 
+  updateRating(rate) {
+    console.log(rate)
+  }
+
   render() {
-    let Stars;
-    for (let i = 0; i < this.state.max; i++) {
-      if (this.state.selected > i) {
-        Stars += <StartImg src={starFull} />;
-      } else {
-        Stars += <StartImg src={starEmpty} />;
-      }
-      console.log(this.state.max);
-
-    }
-
     return(
       <WrapperFilter>
         <FilterRate>
           <TextSmall>
             Stars
           </TextSmall>
-          <Stars></Stars>
+          <Rating
+            stop={this.state.max}
+            emptySymbol={<StarEmpty />}
+            fullSymbol={<StarFull />}
+            onChange={this.updateRating.bind(this)}
+          />
         </FilterRate>
       </WrapperFilter>
     );
