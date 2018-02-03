@@ -3,7 +3,7 @@ import DayPicker, { DateUtils } from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 import './Calendar.css';
 
-export default class Example extends React.Component {
+export default class Calendar extends React.Component {
   static defaultProps = {
     numberOfMonths: 1,
     pagedNavigation: false
@@ -31,7 +31,7 @@ export default class Example extends React.Component {
     const { from, to } = this.state;
     const modifiers = { start: from, end: to };
     return (
-      <div className="RangeExample">
+      <div className="WrapperCalendar">
         <DayPicker
           className="Selectable"
           numberOfMonths={this.props.numberOfMonths}
