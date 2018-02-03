@@ -27,11 +27,3 @@
   width: 24px;
   top: -9px;
 }
-
-.rheostat-handle:before,
-.rheostat-handle:after {
-  content: '';
-  display: block;
-  position: absolute;
-  background-color: #dadfe8;
-}

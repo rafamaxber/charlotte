@@ -16,22 +16,24 @@ const FilterTitle = styled.div`
   color: #000000;
   margin-bottom: 39px;
 `;
-  const TextSmall = styled.div`
-    font-family: 'Heebo', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 12.8px;
-    color: #B5B5B5;
-    margin-bottom: 20px;
+const TextSmall = styled.div`
+  font-family: 'Heebo', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 12.8px;
+  color: #B5B5B5;
+  margin-bottom: 20px;
 `;
 const FilterRange = styled.div``;
 const WrapperValue = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 15px;
+  margin-top: 20px;
 `;
-const FilterValue = styled.div``;
+const FilterValue = styled.div`
+  text-align: ${props => props.left ? 'left' : 'right' };
+`;
 const FilterValueTitle = styled.div`
   font-family: 'Heebo', sans-serif;
   font-style: normal;
@@ -62,7 +64,7 @@ export default class WrapperFilterRange extends Component {
       min: 100,
       max: 1000,
       minPrice: 100,
-      maxPrice: 1000,
+      maxPrice: 930,
     }
   }
 
