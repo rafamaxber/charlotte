@@ -48,7 +48,7 @@ export default ({ typeBtn, text, children, size, action, href }) => {
     );
   }
   return (
-    <Button typeBtn={typeBtn}>
+    <Button typeBtn={typeBtn} onClick={action}>
       {children}
     </Button>
   );

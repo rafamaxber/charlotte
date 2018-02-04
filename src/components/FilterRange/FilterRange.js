@@ -68,8 +68,9 @@ export default class WrapperFilterRange extends Component {
     }
   }
 
-  updateFilterValues({values}) {
-    this.setState({ minPrice: values[0], maxPrice: values[1]});
+  updateFilterValues() {
+    this.props.updateFilterPrice({ minPrice: this.state.minPrice, maxPrice: this.state.maxPrice });
+    return this.props.afterupdateFilterPrice();
   }
 
   render() {
@@ -85,7 +86,8 @@ export default class WrapperFilterRange extends Component {
           <Rheostat
             min={this.state.min}
             max={this.state.max}
-            onChange={this.updateFilterValues.bind(this)}
+            onValuesUpdated={({ values }) => this.setState({ minPrice: values[0], maxPrice: values[1] })}
+            onSliderDragEnd={this.updateFilterValues.bind(this)}
             values={[this.state.minPrice, this.state.maxPrice]}
           />
           <WrapperValue>

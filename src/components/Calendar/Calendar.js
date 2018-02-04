@@ -23,6 +23,7 @@ export default class Calendar extends React.Component {
   handleDayClick(day) {
     const range = DateUtils.addDayToRange(day, this.state);
     this.setState(range);
+    this.props.updateRangeDate(range);
   }
   handleResetClick() {
     this.setState(this.getInitialState());

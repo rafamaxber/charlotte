@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import moment from 'moment';
 import Calendar from '../Calendar/Calendar';
 import Button from '../Button/Button';
 import BoxTitle from '../BoxTitle/BoxTitle';
@@ -51,7 +52,22 @@ const WrapperBox = styled.div`
   margin-top: 50px;
 `;
 
-export default () => (
+const dateTranslate = (dateIso) => {
+  if (dateIso) {
+    const utcDate = dateIso.toUTCString();
+    return (
+      <span>
+        {moment(utcDate).format("MMMM")}
+        <b> {moment(utcDate).format("DD")}</b>,
+        <span> {moment(utcDate).format("YYYY")} </span>
+      </span>
+    );
+  }
+  return false;
+}
+
+
+export default ({ children, startDate, endDate, fetchHotels}) => (
   <Box>
     <BoxTitle>
       Select the dates to stay in Charlotte
@@ -64,8 +80,7 @@ export default () => (
             CHECK-IN
           </BoxDateTitle>
           <BoxDateValue>
-            {/* Choose a date */}
-            August <strong>13</strong>, 2017
+            { dateTranslate(startDate) || `Choose a date` } 
           </BoxDateValue>
         </BoxDate>
 
@@ -74,18 +89,18 @@ export default () => (
             CHECK-OUT
           </BoxDateTitle>
           <BoxDateValue>
-              Choose a date
+            {dateTranslate(endDate) || `Choose a date`} 
           </BoxDateValue>
         </BoxDate>
 
-        <Button typeBtn="default" size="default">
+        <Button typeBtn="default" size="default" action={fetchHotels}>
           Search hotels
         </Button>
 
       </WrapperBoxDate>
       
       <WrapperBoxCalendar>
-        <Calendar></Calendar>
+        {children}
       </WrapperBoxCalendar>
     
     </WrapperBox>

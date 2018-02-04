@@ -35,23 +35,6 @@ const TextSmall = styled.div`
 const FilterRate = styled.div``;
 
 export default class WrapperFilterRate extends Component {
-  constructor(props) {
-    super(props);
-    this.state = this.getInitialState();
-  }
-
-  getInitialState() {
-    return {
-      min: 0,
-      max: 5,
-      default: 3,
-      selected: 4,
-    }
-  }
-
-  updateRating(rate) {
-    console.log(rate)
-  }
 
   render() {
     return(
@@ -61,10 +44,10 @@ export default class WrapperFilterRate extends Component {
             Stars
           </TextSmall>
           <Rating
-            stop={this.state.max}
+            onChange={this.props.updateFilterRate.bind(this)}
             emptySymbol={<StarEmpty />}
             fullSymbol={<StarFull />}
-            onChange={this.updateRating.bind(this)}
+            initialRating={this.props.updatedRate}
           />
         </FilterRate>
       </WrapperFilter>
