@@ -78,7 +78,9 @@ export default () => (
           </BoxDateValue>
         </BoxDate>
 
-        <Button typeBtn="default"></Button>
+        <Button typeBtn="default" size="default">
+          Search hotels
+        </Button>
 
       </WrapperBoxDate>
       

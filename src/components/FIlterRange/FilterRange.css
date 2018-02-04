@@ -8,13 +8,11 @@
   height: 4px;
 }
 
-
 .rheostat-progress {
   background-color: #f98339;
   position: absolute;
   top: 0;
   height: 4px;
-
 }
 
 .rheostat-handle {

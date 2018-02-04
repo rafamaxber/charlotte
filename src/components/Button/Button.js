@@ -3,42 +3,52 @@ import styled from 'styled-components';
 
 const colorsForButton = {
   default: "#F98100",
-  level2: "#79BD1A",
+  info: "#79BD1A",
 }
 
-const Button = styled.a.attrs({
-  borderColor: props => colorsForButton[props.typeBtn],
-  fontColor: props => colorsForButton[props.typeBtn],
-})`
+const Button = styled.a`
   font-family: 'Heebo', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 15px;
-  max-width: 180px;
-  width: 100%;
-  height: 50px;
+  max-width: 200px;
   background-color: #FFF;
   border-width: 2px;
   border-style: solid;
-  border-color: ${props => props.borderColor};
+  border-color: ${props => colorsForButton[props.typeBtn || 'default']};
   border-radius: 25px;
-  padding: 14px;
+  padding: 12px 43px;
   text-align: center;
   display: inline-block;
   line-height: normal;
   text-align: center;
   text-decoration: none;
   outline: none;
-  color: ${props => props.borderColor};
+  color: ${props => colorsForButton[props.typeBtn || 'default']};
   transition: .3s ease;
   &:hover, &:focus {
-    background-color:${props => props.borderColor};
+    background-color:${props => colorsForButton[props.typeBtn || 'default']};
     color: #fff;
   }
 `;
 
-export default ({ typeBtn, text }) => (
-  <Button href="#" typeBtn={typeBtn}>
-    {text || 'Search hotels'}
-  </Button>
-);
+const ButtonSmall = Button.extend`
+  font-size: 13px;
+  border-width: 1px;
+  padding: 10px 24.5px;
+`;
+
+export default ({ typeBtn, text, children, size }) => {
+  if (size === 'small') {
+    return (
+      <ButtonSmall href="#" typeBtn={typeBtn}>
+        {children}
+      </ButtonSmall>
+    );
+  }
+  return (
+    <Button href="#" typeBtn={typeBtn}>
+      {children}
+    </Button>
+  );
+};
