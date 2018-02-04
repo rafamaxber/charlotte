@@ -24,6 +24,7 @@ const Button = styled.a`
   text-align: center;
   text-decoration: none;
   outline: none;
+  cursor: pointer;
   color: ${props => colorsForButton[props.typeBtn || 'default']};
   transition: .3s ease;
   &:hover, &:focus {
@@ -38,16 +39,16 @@ const ButtonSmall = Button.extend`
   padding: 10px 24.5px;
 `;
 
-export default ({ typeBtn, text, children, size }) => {
+export default ({ typeBtn, text, children, size, action, href }) => {
   if (size === 'small') {
     return (
-      <ButtonSmall href="#" typeBtn={typeBtn}>
+      <ButtonSmall typeBtn={typeBtn} onClick={action}>
         {children}
       </ButtonSmall>
     );
   }
   return (
-    <Button href="#" typeBtn={typeBtn}>
+    <Button typeBtn={typeBtn}>
       {children}
     </Button>
   );

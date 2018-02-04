@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import Button from '../../components/Button/Button';
 import StarFullImage from '../../assets/star-filled.svg';
+import PriceChart from '../PriceChart/PriceChart';
 
 const Wrapper = styled.div`
   max-width: 940px;
@@ -59,14 +60,12 @@ const Description = styled.div`
   font-size: 15px;
   color: #B5B5B5;
 `;
-
 const WrapperButtons = styled.div`
   margin-top: 30px;
 `;
 const WrapperPrice = styled.div`
   width: 160px;
   text-align: right;
-  right: 3%;
   position: relative;
   margin-top: 5%;
 `;
@@ -88,43 +87,73 @@ const Price = styled.div`
   letter-spacing: 3.40909px;
   color: #79BD1A;
 `;
-
 const CardButton = styled.div`
   margin-right: 20px;
   display: inline-block;
 `;
+const WrapperInfo = styled.div`
+  width: 600px;
+  display: flex;
+  align-items: center;
+`;
+export default class Card extends Component {
 
-export default ({ image, title, description, price, price_history, rate }) => (
-  <Wrapper>
-    <Image src={image}></Image>
-    <WrapperDescription>
-      <Rate>
-      {
-        Array.from(new Array(rate)).map((item, index) => <Star key={index}/>)
-      }
-      </Rate>
-      <Title>{title}</Title>
-      <Description>{description}</Description>
-      <WrapperButtons>
-        <CardButton>
-          <Button size='small'>
-            Book now
-          </Button>
-        </CardButton>
-        <CardButton>
-          <Button size='small' typeBtn="info">
-            Price history
-          </Button>
-        </CardButton>
-      </WrapperButtons>
-    </WrapperDescription>
-    <WrapperPrice>
-      <PriceTitle>
-        Total
-      </PriceTitle>
-      <Price>
-        ${price}
-      </Price>
-    </WrapperPrice>
-  </Wrapper>
-);
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showChart: false,
+    }
+  }
+
+  render() {
+    return(
+      <Wrapper>
+        <Image src={this.props.image}></Image>
+        {
+          this.state.showChart && 
+          <PriceChart 
+            history={this.props.price_history}
+            closeChart={() => { this.setState({ showChart: false })}}
+          ></PriceChart>
+        }
+        
+        {
+          !this.state.showChart && 
+          <WrapperInfo>
+            <WrapperDescription>
+              <Rate>
+                {
+                  Array.from(new Array(this.props.rate)).map((item, index) => <Star key={index} />)
+                }
+              </Rate>
+              <Title>{this.props.title}</Title>
+              <Description>{this.props.description}</Description>
+              <WrapperButtons>
+                <CardButton>
+                  <Button size='small'>
+                    Book now
+                  </Button>
+                </CardButton>
+                <CardButton>
+                  <Button size='small' typeBtn="info" action={() => this.setState({ showChart: true })}>
+                    Price history
+                  </Button>
+                </CardButton>
+              </WrapperButtons>
+            </WrapperDescription>
+            <WrapperPrice>
+              <PriceTitle>
+                Total
+              </PriceTitle>
+              <Price>
+                ${this.props.price}
+              </Price>
+            </WrapperPrice>
+          </WrapperInfo>
+        }
+      </Wrapper>
+
+    );
+  }
+} 
