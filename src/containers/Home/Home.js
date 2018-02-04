@@ -75,6 +75,9 @@ const HomePage = (props) => {
               <FilterRate
                 updateFilterRate={props.updateFilterRate}
                 updatedRate={props.rate}
+                afterUpdatedRate={
+                  props.fetchHotels
+                }
               ></FilterRate>
             </LayoutWrapperFilters>
             <LayoutWrapperCards>

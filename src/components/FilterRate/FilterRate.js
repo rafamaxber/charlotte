@@ -35,7 +35,10 @@ const TextSmall = styled.div`
 const FilterRate = styled.div``;
 
 export default class WrapperFilterRate extends Component {
-
+  updateFilterRate(rate) {
+    this.props.updateFilterRate(rate);
+    return this.props.afterUpdatedRate();
+  }
   render() {
     return(
       <WrapperFilter>
@@ -44,7 +47,7 @@ export default class WrapperFilterRate extends Component {
             Stars
           </TextSmall>
           <Rating
-            onChange={this.props.updateFilterRate.bind(this)}
+            onChange={this.updateFilterRate.bind(this)}
             emptySymbol={<StarEmpty />}
             fullSymbol={<StarFull />}
             initialRating={this.props.updatedRate}
