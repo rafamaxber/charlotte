@@ -9,9 +9,41 @@ const MainPage = styled.main`
   margin: 0 auto;
   z-index: 0;
 `;
+const WrapperListHotels = styled.div`
+  margin-top: 60px;  
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+`;
+const WrapperFilters = styled.div`
+  width: 300px;
+`;
+const WrapperCards = styled.div`
+  width: 900px;  
+`;
 
 export default ({ children }) => (
   <MainPage>
     { children }
   </MainPage>
 );
+
+export const LayoutWrapperListHotels = ({ children }) => (
+  <WrapperListHotels>
+    {children}
+  </WrapperListHotels>
+);
+
+export const LayoutWrapperFilters = ({ children }) => (
+  <WrapperFilters>
+    {children}
+  </WrapperFilters>
+);
+
+export const LayoutWrapperCards = ({ children }) => (
+  <WrapperCards>
+    {children}
+  </WrapperCards>
+);
+

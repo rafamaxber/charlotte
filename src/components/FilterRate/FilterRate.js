@@ -6,6 +6,9 @@ import starEmptyImage from '../../assets/star-outline.svg';
 
 const WrapperFilter = styled.div`
   max-width: 300px;
+  border-top: 1px solid #d9d9d9;
+  margin-top: 27px;
+  padding-top: 15px;
 `;
 
 const StarFull = styled.img.attrs({
