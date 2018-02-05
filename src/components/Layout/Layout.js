@@ -11,19 +11,30 @@ const MainPage = styled.main`
 `;
 const WrapperListHotels = styled.div`
   margin-top: 60px;  
-  padding: 0 30px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 0 7px;
+  @media (min-width: 570px) {
+    padding: 0 30px;
+  }
 `;
 const ContainerWrapperListHotels = MainPage.extend`
   
 `;
 const WrapperFilters = styled.div`
-  width: 300px;
+  width: 100%;
+  @media (min-width: 570px) {
+    width: 300px;
+  }
 `;
 const WrapperCards = styled.div`
-  width: 950px;
+  width: 100%;
+  @media (min-width: 570px) {  
+    width: 950px;
+  }
 `;
 
 export default ({ children }) => (

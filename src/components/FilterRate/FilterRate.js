@@ -5,10 +5,13 @@ import starFullImage from '../../assets/star-filled.svg';
 import starEmptyImage from '../../assets/star-outline.svg';
 
 const WrapperFilter = styled.div`
-  max-width: 300px;
   border-top: 1px solid #d9d9d9;
   margin-top: 27px;
   padding-top: 15px;
+  width: 100%;
+  @media (mix-width: 570px) {
+    max-width: 300px;
+  }
 `;
 
 const StarFull = styled.img.attrs({

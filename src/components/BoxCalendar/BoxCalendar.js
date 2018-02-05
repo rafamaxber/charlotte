@@ -5,18 +5,28 @@ import Button from '../Button/Button';
 import BoxTitle from '../BoxTitle/BoxTitle';
 
 const Box = styled.div`
-  width: 838px;
+  width: 100%;
+  max-width: 838px;
   margin: auto;
   background: #FFFFFF;
   box-shadow: 0px -40px 46px rgba(0, 0, 0, 0.332484);
-  border-radius: 7px;
   position: relative;
-  padding-right: 60px;
-  padding-left: 60px;
+  padding-right: 20px;
+  padding-left: 20px;
+  @media (min-width: 570px) {
+    border-radius: 7px;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
 `;
 
 const BoxDate = styled.div`
-
+  @media (max-width: 570px) {
+    width: 50%;
+    border: 1px solid rgb(206, 255, 142);
+    margin-bottom: 30px;
+    padding: 10px 0;
+  }
 `;
 const Text = styled.div`
   font-family: 'Heebo', sans-serif;
@@ -27,19 +37,32 @@ const Text = styled.div`
 `
 const BoxDateTitle = Text.extend`
   color: #555555;
-  font-size: 22px;
+  font-size: 16px;
   text-tranform: uppercase;
+  @media (min-width: 570px) {
+    font-size: 22px;
+  }
 `;
 
 const BoxDateValue = Text.extend`
-  font-size: 20px;
+  font-size: 15px;
   letter-spacing: 1.36364px;
   color: #B5B5B5;
+  @media (min-width: 570px) {
+    font-size: 20px;
+  }
 `;
 const WrapperBoxDate = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  @media (min-width: 570px) {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 `;
 const WrapperBoxCalendar = styled.div`
   position: relative;
@@ -49,6 +72,10 @@ const WrapperBox = styled.div`
   display: flex;
   justify-content: space-around;
   margin-top: 50px;
+  @media (max-width: 570px) {
+    margin-top: 30px;
+    flex-wrap: wrap-reverse;
+  }
 `;
 
 const dateTranslate = (dateIso) => {

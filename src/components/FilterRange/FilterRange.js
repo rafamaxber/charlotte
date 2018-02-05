@@ -4,7 +4,10 @@ import Rheostat from 'rheostat';
 import './FilterRange.css';
 
 const WrapperFilter = styled.div`
-  max-width: 300px;
+  width: 100%;
+  @media (mix-width: 570px) {
+    max-width: 300px;
+  }
 `;
 const FilterTitle = styled.div`
   font-family: 'Montserrat', sans-serif;

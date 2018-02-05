@@ -15,10 +15,14 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
+  @media (max-width: 570px) {
+    padding: 35px 0;
+  }
 `;
 const Image = styled.img`
-  width: 247px;
-  height: 247px;
+  width: 238px;
+  height: 238px;
 `;
 const WrapperDescription = styled.div`
   max-width: 402px;
@@ -40,8 +44,12 @@ const Rate = styled.div`
 const Star = styled.img.attrs({
   src: StarFullImage,
 })`
-  width: 12.6px;
   margin-right: 4.3px;
+  width: 12.6px;
+  @media (mix-width: 570px) {
+    width: 15px;
+  }
+  
 `;
 const Title = styled.div`
   font-family: 'Heebo', sans-serif; 
@@ -65,10 +73,19 @@ const WrapperButtons = styled.div`
   margin-top: 30px;
 `;
 const WrapperPrice = styled.div`
-  width: 160px;
-  text-align: right;
-  position: relative;
-  margin-top: 5%;
+  @media (max-width: 570px) {
+    display: flex;
+    display: flex;
+    margin: 20px auto;
+    align-items: baseline;
+  }
+  @media (min-width: 570px) {
+    display: block;
+    width: 160px;
+    text-align: right;
+    position: relative;
+    margin-top: 5%;
+  }
 `;
 const PriceTitle = styled.div`
   font-family: 'Heebo', sans-serif;
@@ -96,6 +113,10 @@ const WrapperInfo = styled.div`
   width: 600px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap-reverse;
+  @media (max-width: 570px) {
+    text-align: center;
+  }
 `;
 export default class Card extends Component {
 

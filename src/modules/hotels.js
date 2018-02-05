@@ -2,7 +2,7 @@ import axios from 'axios';
 import RestClient from '../services/RestClient';
 
 const clientHttpInstance = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:4001',
+  baseURL: process.env.REACT_APP_API_URL || 'https://charlotteapp-api.herokuapp.com',
 });
 const restClient = new RestClient({
   clientHttpInstance,

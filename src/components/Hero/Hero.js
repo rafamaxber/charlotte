@@ -6,7 +6,7 @@ import crownwhite from '../../assets/crown.svg';
 const Hero = styled.div`
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 220px;
   left: 0px;
   top: 0px;
   background-position: top center;
@@ -26,7 +26,7 @@ const WrapperText = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 70%;
+  height: 100%;
   @media (min-width: 600px) {
     height: 80%;
   }

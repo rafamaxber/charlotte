@@ -2,7 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Box = styled.div`
-  padding-top: 60px;
+  padding-top: 30px;
+  @media (min-width: 570px) {
+    padding-top: 60px;
+  }
 `;
 
 const Title = styled.div`
