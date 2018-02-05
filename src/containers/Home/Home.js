@@ -12,7 +12,7 @@ import HeaderNavigation from '../../components/HeaderNavigation/HeaderNavigation
 import Hero from '../../components/Hero/Hero';
 import BoxCalendar from '../../components/BoxCalendar/BoxCalendar';
 import Calendar from '../../components/Calendar/Calendar';
-import BoxTitle from '../../components/BoxTitle/BoxTitle';
+import BoxTitle, { BoxMessage } from '../../components/BoxTitle/BoxTitle';
 import FilterRange from '../../components/FilterRange/FilterRange';
 import FilterRate from '../../components/FilterRate/FilterRate';
 import Footer from '../../components/Footer/Footer';
@@ -56,11 +56,11 @@ const HomePage = (props) => {
       </BoxCalendar>
       {
         props.hotels &&
-        <LayoutContainerWrapperListHotels>
+        <LayoutContainerWrapperListHotels >
           <BoxTitle>
             Best choices between {formatDate(props.startDate)} and {formatDate(props.endDate)}
           </BoxTitle>
-
+            
           <LayoutWrapperListHotels>
             <LayoutWrapperFilters>
               <FilterRange
@@ -90,6 +90,12 @@ const HomePage = (props) => {
                     rate={item.rate}
                   ></Card>
                 ))
+              }
+              {
+                (props.hotels.length === 0) &&
+                <BoxMessage>
+                  Sorry, we did not find the hotel you were looking for :(
+                </BoxMessage>
               }
             </LayoutWrapperCards>
           </LayoutWrapperListHotels>

@@ -18,6 +18,7 @@ const Wrapper = styled.div`
 `;
 const Image = styled.img`
   width: 247px;
+  height: 247px;
 `;
 const WrapperDescription = styled.div`
   max-width: 402px;
@@ -109,7 +110,7 @@ export default class Card extends Component {
   render() {
     return(
       <Wrapper>
-        <LazyLoad height={200} once>
+        <LazyLoad height={200}>
           <Image src={this.props.image}></Image>
         </LazyLoad>
         {
@@ -118,8 +119,7 @@ export default class Card extends Component {
             history={this.props.price_history}
             closeChart={() => { this.setState({ showChart: false })}}
           ></PriceChart>
-        }
-        
+        }        
         {
           !this.state.showChart && 
           <WrapperInfo>

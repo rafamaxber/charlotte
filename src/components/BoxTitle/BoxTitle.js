@@ -17,10 +17,23 @@ const Title = styled.div`
   display: block;
 `;
 
+const Message = Title.extend`
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+`;
+
 export default ({ children }) => (
   <Box>
     <Title>
       { children }
     </Title>
+  </Box>
+)
+
+export const BoxMessage = ({ children }) => (
+  <Box>
+    <Message>
+      { children }
+    </Message>
   </Box>
 )

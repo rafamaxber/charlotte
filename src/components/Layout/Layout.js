@@ -11,7 +11,7 @@ const MainPage = styled.main`
 `;
 const WrapperListHotels = styled.div`
   margin-top: 60px;  
-  padding: 0 50px;
+  padding: 0 30px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -23,7 +23,7 @@ const WrapperFilters = styled.div`
   width: 300px;
 `;
 const WrapperCards = styled.div`
-  width: 900px;  
+  width: 950px;
 `;
 
 export default ({ children }) => (
