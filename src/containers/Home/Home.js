@@ -15,6 +15,7 @@ import Calendar from '../../components/Calendar/Calendar';
 import BoxTitle from '../../components/BoxTitle/BoxTitle';
 import FilterRange from '../../components/FilterRange/FilterRange';
 import FilterRate from '../../components/FilterRate/FilterRate';
+import Footer from '../../components/Footer/Footer';
 import Card from '../../components/Card/Card';
 
 import { 
@@ -24,7 +25,7 @@ import {
   fetchHotels,
 } from '../../modules/hotels';
 
-const dateTranslate = (dateIso) => {
+const formatDate = (dateIso) => {
   if (dateIso) {
     const utcDate = dateIso.toUTCString();
     return(
@@ -37,9 +38,7 @@ const dateTranslate = (dateIso) => {
 }
 
 const HomePage = (props) => {
-
-
-
+  console.log('HomePage ', props.errorMessage);
   return(
     <Layout>
       <HeaderNavigation></HeaderNavigation>
@@ -55,12 +54,11 @@ const HomePage = (props) => {
           endDate={props.endDate}
         ></Calendar>
       </BoxCalendar>
-
       {
         props.hotels &&
         <LayoutContainerWrapperListHotels>
           <BoxTitle>
-            Best choices between {dateTranslate(props.startDate)} and {dateTranslate(props.endDate)}
+            Best choices between {formatDate(props.startDate)} and {formatDate(props.endDate)}
           </BoxTitle>
 
           <LayoutWrapperListHotels>
@@ -97,6 +95,7 @@ const HomePage = (props) => {
           </LayoutWrapperListHotels>
         </LayoutContainerWrapperListHotels>
       }
+      <Footer></Footer>
     </Layout>
   );
 };
@@ -107,7 +106,8 @@ const mapStateToProps = state => ({
   rate: state.hotels.rate,
   startDate: state.hotels.startDate,
   endDate: state.hotels.endDate,
-  hotels: state.hotels.hotels
+  hotels: state.hotels.hotels,
+  errorMessage: state.hotels.errorMessage,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({
