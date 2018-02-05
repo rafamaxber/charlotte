@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import LazyLoad from 'react-lazyload';
 import Button from '../../components/Button/Button';
 import StarFullImage from '../../assets/star-filled.svg';
 import PriceChart from '../PriceChart/PriceChart';
@@ -16,8 +17,7 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 const Image = styled.img`
-  max-width: 247px;
-  max-height: 247px;
+  width: 247px;
 `;
 const WrapperDescription = styled.div`
   max-width: 402px;
@@ -109,7 +109,9 @@ export default class Card extends Component {
   render() {
     return(
       <Wrapper>
-        <Image src={this.props.image}></Image>
+        <LazyLoad height={200} once>
+          <Image src={this.props.image}></Image>
+        </LazyLoad>
         {
           this.state.showChart && 
           <PriceChart 

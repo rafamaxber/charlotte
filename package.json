@@ -13,6 +13,7 @@
     "react-day-picker": "^7.0.7",
     "react-dom": "^15.6.1",
     "react-helmet": "^5.2.0",
+    "react-lazyload": "^2.3.0",
     "react-loadable": "^4.0.5",
     "react-rating": "^1.0.4",
     "react-redux": "^5.0.6",

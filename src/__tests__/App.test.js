@@ -5,7 +5,9 @@ import renderer from 'react-test-renderer';
 describe('App', () => {
   it('renders correctly', () => {
     const tree = renderer
-      .create(<App></App>)
+      .create(
+        <App></App>
+      )
       .toJSON();
     expect(tree).toMatchSnapshot();
   });

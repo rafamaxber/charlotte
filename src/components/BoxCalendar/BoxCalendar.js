@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import moment from 'moment';
-import Calendar from '../Calendar/Calendar';
 import Button from '../Button/Button';
 import BoxTitle from '../BoxTitle/BoxTitle';
 

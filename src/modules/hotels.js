@@ -59,7 +59,14 @@ export default (state = initialState, action) => {
 export const fetchHotels = () => {
   return (dispatch, getState) => {
     console.log('fetchHotels == ', getState().hotels)
-    restClient.fetchHotels(getState().hotels)
+    const params = {
+      minPrice: getState().hotels.minPrice,
+      maxPrice: getState().hotels.maxPrice,
+      rate: getState().hotels.rate,
+      startDate: new Date(getState().hotels.startDate).getTime() || '',
+      endDate: new Date(getState().hotels.endDate).getTime() || '',
+    }
+    restClient.fetchHotels(params)
       .then(hotels => {
         dispatch({
           type: LIST_HOTELS,
