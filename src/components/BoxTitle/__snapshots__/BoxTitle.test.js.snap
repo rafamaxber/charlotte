@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BoxTitle Should match with snapshot 1`] = `
+<div
+  className="sc-bdVaJa cnOyFf"
+>
+  <div
+    className="sc-bwzfXH fccHGK"
+  />
+</div>
+`;

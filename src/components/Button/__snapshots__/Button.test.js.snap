@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Should match with snapshot 1`] = `
+<a
+  className="sc-bdVaJa fxfHPe"
+  onClick={undefined}
+/>
+`;

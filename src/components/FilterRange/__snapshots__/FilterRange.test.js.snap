@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterRange Should match with snapshot 1`] = `
+<div
+  className="sc-bdVaJa bwGexn"
+>
+  <div
+    className="sc-bwzfXH hooEMH"
+  >
+    Filters
+  </div>
+  <div
+    className="sc-bxivhb bUZGRr"
+  >
+    <div
+      className="sc-htpNat hctOzp"
+    >
+      Price Range
+    </div>
+    <div
+      className="rheostat rheostat-horizontal "
+      onClick={[Function]}
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+    >
+      <div
+        className="rheostat-background"
+      />
+      <button
+        aria-disabled={false}
+        aria-valuemax={930}
+        aria-valuemin={100}
+        aria-valuenow={100}
+        className="rheostat-handle"
+        data-handle-key={0}
+        onClick={undefined}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+        role="slider"
+        style={
+          Object {
+            "left": "0%",
+            "position": "absolute",
+          }
+        }
+        tabIndex={0}
+        type="button"
+      />
+      <button
+        aria-disabled={false}
+        aria-valuemax={1000}
+        aria-valuemin={100}
+        aria-valuenow={930}
+        className="rheostat-handle"
+        data-handle-key={1}
+        onClick={undefined}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+        role="slider"
+        style={
+          Object {
+            "left": "92.22222222222223%",
+            "position": "absolute",
+          }
+        }
+        tabIndex={0}
+        type="button"
+      />
+      <div
+        className="rheostat-progress"
+        style={
+          Object {
+            "left": "0%",
+            "width": "92.22222222222223%",
+          }
+        }
+      />
+    </div>
+    <div
+      className="sc-ifAKCX bLhXGI"
+    >
+      <div
+        className="sc-EHOje kLbaUi"
+      >
+        <div
+          className="sc-bZQynM etZCOS"
+        >
+          Min
+        </div>
+        <div
+          className="sc-gzVnrw flafmp"
+        >
+          $
+          100
+        </div>
+      </div>
+      <div
+        className="sc-EHOje dhYIww"
+      >
+        <div
+          className="sc-bZQynM etZCOS"
+        >
+          Max
+        </div>
+        <div
+          className="sc-gzVnrw flafmp"
+        >
+          $
+          930
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

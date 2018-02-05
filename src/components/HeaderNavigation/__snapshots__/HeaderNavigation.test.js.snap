@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderNavigation Should match with snapshot 1`] = `
+<header
+  className="sc-bdVaJa fLsyZm"
+>
+  <a
+    className="sc-bwzfXH ejqRSR"
+    to="#"
+  >
+    The Queen city
+  </a>
+  <a
+    className="sc-bwzfXH CoAOd"
+    to="#"
+  >
+    My Reservations
+  </a>
+  <a
+    className="sc-bwzfXH CoAOd"
+    to="#"
+  >
+    Guide
+  </a>
+</header>
+`;

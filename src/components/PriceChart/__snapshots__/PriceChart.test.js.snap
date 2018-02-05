@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PriceChart Should match with snapshot 1`] = `
+<div
+  className="sc-bdVaJa fjezih"
+>
+  <div
+    className="sc-bwzfXH hCABeu"
+  >
+    <div
+      className="sc-htpNat lnWDRr"
+    >
+      Price history for 2017
+    </div>
+    <div
+      className="sc-bxivhb idpqiB"
+      onClick={undefined}
+    >
+      <img
+        className="sc-ifAKCX fTxmoU"
+        src="back-description.svg"
+      />
+      Back to description
+    </div>
+    <div
+      className="sc-EHOje iQxnOv"
+    >
+      <div
+        className="sc-bZQynM gziNKJ"
+        size={87.6}
+      >
+        <div
+          className="chart-tooltip sc-gzVnrw hYwrRH"
+        >
+          $
+          438
+        </div>
+        <div
+          className="sc-htoDjs cVtJOz"
+        >
+          Jan
+        </div>
+      </div>
+      <div
+        className="sc-bZQynM Sgapf"
+        size={80.02000000000001}
+      >
+        <div
+          className="chart-tooltip sc-gzVnrw hYwrRH"
+        >
+          $
+          400.1
+        </div>
+        <div
+          className="sc-htoDjs cVtJOz"
+        >
+          Feb
+        </div>
+      </div>
+      <div
+        className="sc-bZQynM biprHx"
+        size={85}
+      >
+        <div
+          className="chart-tooltip sc-gzVnrw hYwrRH"
+        >
+          $
+          425
+        </div>
+        <div
+          className="sc-htoDjs cVtJOz"
+        >
+          Mar
+        </div>
+      </div>
+      <div
+        className="sc-bZQynM kCXycv"
+        size={86.72}
+      >
+        <div
+          className="chart-tooltip sc-gzVnrw hYwrRH"
+        >
+          $
+          433.6
+        </div>
+        <div
+          className="sc-htoDjs cVtJOz"
+        >
+          Apr
+        </div>
+      </div>
+      <div
+        className="sc-bZQynM lnmBcL"
+        size={85.67999999999999}
+      >
+        <div
+          className="chart-tooltip sc-gzVnrw hYwrRH"
+        >
+          $
+          428.4
+        </div>
+        <div
+          className="sc-htoDjs cVtJOz"
+        >
+          May
+        </div>
+      </div>
+      <div
+        className="sc-bZQynM iTEwDt"
+        size={83}
+      >
+        <div
+          className="chart-tooltip sc-gzVnrw hYwrRH"
+        >
+          $
+          415
+        </div>
+        <div
+          className="sc-htoDjs cVtJOz"
+        >
+          Jun
+        </div>
+      </div>
+      <div
+        className="sc-bZQynM hRFoqL"
+        size={82.4}
+      >
+        <div
+          className="chart-tooltip sc-gzVnrw hYwrRH"
+        >
+          $
+          412
+        </div>
+        <div
+          className="sc-htoDjs cVtJOz"
+        >
+          Jul
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

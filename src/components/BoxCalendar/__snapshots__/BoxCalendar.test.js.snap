@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BoxCalendar Should match with snapshot 1`] = `
+<div
+  className="sc-ifAKCX cMizZd"
+>
+  <div
+    className="sc-htpNat cPXLHW"
+  >
+    <div
+      className="sc-bxivhb dxsIBs"
+    >
+      Select the dates to stay in Charlotte
+    </div>
+  </div>
+  <div
+    className="sc-gZMcBi eSihRx"
+  >
+    <div
+      className="sc-dnqmqq brpsMC"
+    >
+      <div
+        className="sc-EHOje edRFCv"
+      >
+        <div
+          className="sc-gzVnrw iOgjDl"
+        >
+          CHECK-IN
+        </div>
+        <div
+          className="sc-htoDjs gmNAtx"
+        >
+          Choose a date
+        </div>
+      </div>
+      <div
+        className="sc-EHOje edRFCv"
+      >
+        <div
+          className="sc-gzVnrw iOgjDl"
+        >
+          CHECK-OUT
+        </div>
+        <div
+          className="sc-htoDjs gmNAtx"
+        >
+          Choose a date
+        </div>
+      </div>
+      <a
+        className="sc-bdVaJa fxfHPe"
+        onClick={undefined}
+      >
+        Search hotels
+      </a>
+    </div>
+    <div
+      className="sc-iwsKbI hcoZJr"
+    />
+  </div>
+</div>
+`;
