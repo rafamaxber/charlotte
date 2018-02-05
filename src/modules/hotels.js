@@ -13,6 +13,7 @@ export const LIST_HOTELS_REQUESTED = 'hotels/LIST_HOTELS_REQUESTED';
 export const UPDATE_PRICE = 'hotels/UPDATE_PRICE';
 export const UPDATE_RATE = 'hotels/UPDATE_RATE';
 export const UPDATE_DATE = 'hotels/UPDATE_START_DATE';
+export const LIST_HOTELS_ERROR = 'hotels/LIST_HOTELS_ERROR';
 
 const initialState = {
   minPrice: 100,
@@ -20,7 +21,8 @@ const initialState = {
   rate: 0,
   startDate: '',
   endDate: '',
-  hotels: undefined
+  hotels: undefined,
+  errorMessage: '',
 }
 
 export default (state = initialState, action) => {
@@ -50,6 +52,12 @@ export default (state = initialState, action) => {
         startDate: action.startDate,
         endDate: action.endDate,
       }
+    
+    case LIST_HOTELS_ERROR:
+      return {
+        ...state,
+        errorMessage: action.message,
+      }
 
       default:
         return state
@@ -58,7 +66,6 @@ export default (state = initialState, action) => {
 
 export const fetchHotels = () => {
   return (dispatch, getState) => {
-    console.log('fetchHotels == ', getState().hotels)
     const params = {
       minPrice: getState().hotels.minPrice,
       maxPrice: getState().hotels.maxPrice,
@@ -71,6 +78,12 @@ export const fetchHotels = () => {
         dispatch({
           type: LIST_HOTELS,
           hotels: hotels.data,
+        });
+      })
+      .catch(error => {
+        return dispatch({
+          type: LIST_HOTELS_ERROR,
+          message: error.error.message
         });
       });
   }
