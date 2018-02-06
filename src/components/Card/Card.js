@@ -27,15 +27,17 @@ const Image = styled.img`
 const WrapperDescription = styled.div`
   max-width: 402px;
   position: relative;
-  &:after {
-    content: "";
-    width: 2px;
-    height: 100%;
-    right: -5%;
-    top: 0;
-    background-color: #D9D9D9;
-    position: absolute;
-    display: block;
+  @media (min-width: 570px) {
+    &:after {
+      content: "";
+      width: 2px;
+      height: 100%;
+      right: -5%;
+      top: 0;
+      background-color: #D9D9D9;
+      position: absolute;
+      display: block;
+    }
   }
 `;
 const Rate = styled.div`
@@ -71,6 +73,10 @@ const Description = styled.div`
 `;
 const WrapperButtons = styled.div`
   margin-top: 30px;
+  @media (max-width: 570px) {
+    display: flex;
+    justify-content: space-evenly;
+  }
 `;
 const WrapperPrice = styled.div`
   @media (max-width: 570px) {
@@ -81,7 +87,7 @@ const WrapperPrice = styled.div`
   }
   @media (min-width: 570px) {
     display: block;
-    width: 160px;
+    width: 195px;
     text-align: right;
     position: relative;
     margin-top: 5%;
@@ -106,8 +112,10 @@ const Price = styled.div`
   color: #79BD1A;
 `;
 const CardButton = styled.div`
-  margin-right: 20px;
   display: inline-block;
+  @media (min-width: 570px) {
+    margin-right: 20px;
+  }
 `;
 const WrapperInfo = styled.div`
   width: 600px;

@@ -3,10 +3,19 @@ import styled from 'styled-components';
 import BackButtonImage from '../../assets/back-description.svg';
 
 const WrapperChart = styled.div`
-  width: 600px;
+  max-width: 600px;
+  width: 95%;
+  padding: 10px 10px 0 10px;
+  margin-top: 20px;
+  @media (min-width: 570px) {
+    margin-top: 0px;
+    padding: 0 0 0 0;
+    min-height: 180px;
+  }
 `;
 const StageChart = styled.div`
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
 `;
 const Title = styled.div`
   font-family: 'Heebo', sans-serif; 
@@ -45,10 +54,13 @@ const BackButtonIcon = styled.img.attrs({
 `;
 const Chart = styled.div`
   border-bottom: 2px solid #d9d9d9;
-  min-height: 180px;
+  min-height: 120px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  @media (min-width: 570px) {
+    min-height: 180px;
+  }
 `;
 const Bar = styled.div`
   width: 27px;
