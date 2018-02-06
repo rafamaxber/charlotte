@@ -2,10 +2,10 @@
 
 exports[`BoxCalendar Should match with snapshot 1`] = `
 <div
-  className="sc-ifAKCX cMizZd"
+  className="sc-EHOje izPosg"
 >
   <div
-    className="sc-htpNat cPXLHW"
+    className="sc-htpNat llGTNA"
   >
     <div
       className="sc-bxivhb dxsIBs"
@@ -14,35 +14,35 @@ exports[`BoxCalendar Should match with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="sc-gZMcBi eSihRx"
+    className="sc-gqjmRU eAfyOT"
   >
     <div
-      className="sc-dnqmqq brpsMC"
+      className="sc-iwsKbI jgrBQH"
     >
       <div
-        className="sc-EHOje edRFCv"
+        className="sc-bZQynM jfCEGa"
       >
         <div
-          className="sc-gzVnrw iOgjDl"
+          className="sc-htoDjs iUqqkf"
         >
           CHECK-IN
         </div>
         <div
-          className="sc-htoDjs gmNAtx"
+          className="sc-dnqmqq cmuNkm"
         >
           Choose a date
         </div>
       </div>
       <div
-        className="sc-EHOje edRFCv"
+        className="sc-bZQynM jfCEGa"
       >
         <div
-          className="sc-gzVnrw iOgjDl"
+          className="sc-htoDjs iUqqkf"
         >
           CHECK-OUT
         </div>
         <div
-          className="sc-htoDjs gmNAtx"
+          className="sc-dnqmqq cmuNkm"
         >
           Choose a date
         </div>
@@ -55,7 +55,7 @@ exports[`BoxCalendar Should match with snapshot 1`] = `
       </a>
     </div>
     <div
-      className="sc-iwsKbI hcoZJr"
+      className="sc-gZMcBi hwBuNd"
     />
   </div>
 </div>

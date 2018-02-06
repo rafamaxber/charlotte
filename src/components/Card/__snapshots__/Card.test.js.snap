@@ -12,7 +12,7 @@ ShallowWrapper {
     <LazyLoad
       height={200}
       offset={0}
-      once={true}
+      once={false}
       overflow={false}
       resize={false}
       scroll={true}
@@ -72,7 +72,7 @@ ShallowWrapper {
       <LazyLoad
         height={200}
         offset={0}
-        once={true}
+        once={false}
         overflow={false}
         resize={false}
         scroll={true}
@@ -242,7 +242,7 @@ ShallowWrapper {
           <LazyLoad
             height={200}
             offset={0}
-            once={true}
+            once={false}
             overflow={false}
             resize={false}
             scroll={true}
@@ -302,7 +302,7 @@ ShallowWrapper {
           <LazyLoad
             height={200}
             offset={0}
-            once={true}
+            once={false}
             overflow={false}
             resize={false}
             scroll={true}

@@ -8,6 +8,6 @@ const Box = styled.div``;
 const Message = styled.div``;
 const CloseBtn = styled.div``;
 
-export default () => {
-
-}
+export default () => (
+  <Stage></Stage>
+)

@@ -2,10 +2,10 @@
 
 exports[`PriceChart Should match with snapshot 1`] = `
 <div
-  className="sc-bdVaJa fjezih"
+  className="sc-bdVaJa eQIsiy"
 >
   <div
-    className="sc-bwzfXH hCABeu"
+    className="sc-bwzfXH rYvhI"
   >
     <div
       className="sc-htpNat lnWDRr"
@@ -23,7 +23,7 @@ exports[`PriceChart Should match with snapshot 1`] = `
       Back to description
     </div>
     <div
-      className="sc-EHOje iQxnOv"
+      className="sc-EHOje fvkpsD"
     >
       <div
         className="sc-bZQynM gziNKJ"

@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Should match with snapshot 1`] = `
+<div
+  className="sc-bdVaJa cpfJLt"
+>
+  <div
+    className="sc-htpNat gHlAWw"
+  >
+    <a
+      className="sc-bxivhb yVKca"
+      href="#"
+    >
+      <img
+        alt="Facebook"
+        src="facebook.svg"
+      />
+    </a>
+    <a
+      className="sc-bxivhb yVKca"
+      href="#"
+    >
+      <img
+        alt="Twiter"
+        src="twitter.svg"
+      />
+    </a>
+    <a
+      className="sc-bxivhb yVKca"
+      href="#"
+    >
+      <img
+        alt="Instagram"
+        src="instagram.svg"
+      />
+    </a>
+  </div>
+  <small
+    className="sc-bwzfXH fHSaSV"
+  >
+    © 2004-2018 Visit Charlotte. All Rights Reserved. 500 S. College Street, Suite 300, Charlotte, NC 28202
+  </small>
+</div>
+`;
