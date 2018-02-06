@@ -13,9 +13,7 @@ export default class RestClient {
     return this.clientHttpInstance.get('/hotels', { params })
       .then(response => response)
       .catch((error) => {
-        throw {
-          error
-        };
+        throw new Error(error);
       });
   }
 }

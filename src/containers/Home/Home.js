@@ -2,28 +2,44 @@ import React from 'react';
 import moment from 'moment';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import LoadableWrapper from '../../components/Loading/Loadable';
 import Layout, {
   LayoutContainerWrapperListHotels,
   LayoutWrapperListHotels,
-  LayoutWrapperFilters,
   LayoutWrapperCards,
 } from '../../components/Layout/Layout';
-import HeaderNavigation from '../../components/HeaderNavigation/HeaderNavigation';
-import Hero from '../../components/Hero/Hero';
-import BoxCalendar from '../../components/BoxCalendar/BoxCalendar';
-import Calendar from '../../components/Calendar/Calendar';
-import BoxTitle, { BoxMessage } from '../../components/BoxTitle/BoxTitle';
-import FilterRange from '../../components/FilterRange/FilterRange';
-import FilterRate from '../../components/FilterRate/FilterRate';
-import Footer from '../../components/Footer/Footer';
-import Card from '../../components/Card/Card';
-
+import LayoutWrapperFilters from '../../components/LayoutWrapperFilters/LayoutWrapperFilters';
 import { 
   updateFilterPrice,
   updateRangeDate,
   updateFilterRate,
   fetchHotels,
 } from '../../modules/hotels';
+
+import HeaderNavigation from '../../components/HeaderNavigation/HeaderNavigation';
+import BoxTitle, { BoxMessage } from '../../components/BoxTitle/BoxTitle';
+
+const Hero = LoadableWrapper({
+  loader: () => import(/*webpackChunkName: "Hero"*/'../../components/Hero/Hero'),
+});
+const BoxCalendar = LoadableWrapper({
+  loader: () => import(/*webpackChunkName: "BoxCalendar"*/'../../components/BoxCalendar/BoxCalendar'),
+});
+const Calendar = LoadableWrapper({
+  loader: () => import(/*webpackChunkName: "Calendar"*/'../../components/Calendar/Calendar'),
+});
+const FilterRange = LoadableWrapper({
+  loader: () => import(/*webpackChunkName: "FilterRange"*/'../../components/FilterRange/FilterRange'),
+});
+const FilterRate = LoadableWrapper({
+  loader: () => import(/*webpackChunkName: "FilterRate"*/'../../components/FilterRate/FilterRate'),
+});
+const Card = LoadableWrapper({
+  loader: () => import(/*webpackChunkName: "Card"*/'../../components/Card/Card'),
+});
+const Footer = LoadableWrapper({
+  loader: () => import(/*webpackChunkName: "Footer"*/'../../components/Footer/Footer'),
+});
 
 const formatDate = (dateIso) => {
   if (dateIso) {
@@ -55,6 +71,9 @@ const HomePage = (props) => {
         ></Calendar>
       </BoxCalendar>
       {
+        console.log('\n\nstatus ===>>', props.hotelsLoading)
+      }
+      {
         props.hotels &&
         <LayoutContainerWrapperListHotels >
           <BoxTitle>
@@ -64,6 +83,8 @@ const HomePage = (props) => {
           <LayoutWrapperListHotels>
             <LayoutWrapperFilters>
               <FilterRange
+                minPrice={props.minPrice}
+                maxPrice={props.maxPrice}
                 updateFilterPrice={props.updateFilterPrice}
                 afterupdateFilterPrice = {
                   props.fetchHotels
@@ -72,12 +93,12 @@ const HomePage = (props) => {
               <FilterRate
                 updateFilterRate={props.updateFilterRate}
                 updatedRate={props.rate}
-                afterUpdatedRate={
-                  props.fetchHotels
-                }
+                afterUpdatedRate={props.fetchHotels}
               ></FilterRate>
             </LayoutWrapperFilters>
-            <LayoutWrapperCards>
+            <LayoutWrapperCards
+              loading={props.hotelsLoading}
+              >
               {
                 props.hotels.map(item => (
                   <Card
@@ -114,6 +135,7 @@ const mapStateToProps = state => ({
   endDate: state.hotels.endDate,
   hotels: state.hotels.hotels,
   errorMessage: state.hotels.errorMessage,
+  hotelsLoading: state.hotels.hotelsLoading,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({

@@ -24,16 +24,10 @@ const WrapperListHotels = styled.div`
 const ContainerWrapperListHotels = MainPage.extend`
   
 `;
-const WrapperFilters = styled.div`
-  width: 100%;
-  @media (min-width: 570px) {
-    width: 300px;
-  }
-`;
 const WrapperCards = styled.div`
   width: 100%;
   @media (min-width: 570px) {  
-    width: 950px;
+    width: 900px;
   }
 `;
 
@@ -49,15 +43,9 @@ export const LayoutWrapperListHotels = ({ children }) => (
   </WrapperListHotels>
 );
 
-export const LayoutWrapperFilters = ({ children }) => (
-  <WrapperFilters>
-    {children}
-  </WrapperFilters>
-);
-
-export const LayoutWrapperCards = ({ children }) => (
+export const LayoutWrapperCards = ({ children, loading }) => (
   <WrapperCards>
-    {children}
+    { children }
   </WrapperCards>
 );
 

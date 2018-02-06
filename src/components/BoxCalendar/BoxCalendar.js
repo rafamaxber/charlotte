@@ -66,7 +66,7 @@ const WrapperBoxDate = styled.div`
 `;
 const WrapperBoxCalendar = styled.div`
   position: relative;
-  z-index: 10;
+  z-index: 0;
 `;
 const WrapperBox = styled.div`
   display: flex;

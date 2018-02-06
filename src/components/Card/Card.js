@@ -6,7 +6,7 @@ import StarFullImage from '../../assets/star-filled.svg';
 import PriceChart from '../PriceChart/PriceChart';
 
 const Wrapper = styled.div`
-  max-width: 940px;
+  max-width: 900px;
   min-height: 318px;
   background: #FFFFFF;
   box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.22);
@@ -51,7 +51,6 @@ const Star = styled.img.attrs({
   @media (mix-width: 570px) {
     width: 15px;
   }
-  
 `;
 const Title = styled.div`
   font-family: 'Heebo', sans-serif; 
@@ -184,7 +183,6 @@ export default class Card extends Component {
           </WrapperInfo>
         }
       </Wrapper>
-
     );
   }
 } 

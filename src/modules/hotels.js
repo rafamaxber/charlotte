@@ -23,6 +23,7 @@ const initialState = {
   endDate: '',
   hotels: undefined,
   errorMessage: '',
+  hotelsLoading: false,
 }
 
 export default (state = initialState, action) => {
@@ -31,6 +32,12 @@ export default (state = initialState, action) => {
       return {
         ...state,
         hotels: action.hotels,
+        hotelsLoading: action.hotelsLoading,
+      }
+    case LIST_HOTELS_REQUESTED:
+      return {
+        ...state,
+        hotelsLoading: action.hotelsLoading,
       }
 
     case UPDATE_PRICE:
@@ -73,17 +80,23 @@ export const fetchHotels = () => {
       startDate: new Date(getState().hotels.startDate).getTime() || '',
       endDate: new Date(getState().hotels.endDate).getTime() || '',
     }
-    restClient.fetchHotels(params)
+    dispatch({
+      type: LIST_HOTELS_REQUESTED,
+      hotelsLoading: true,
+    });
+    return restClient.fetchHotels(params)
       .then(hotels => {
         dispatch({
           type: LIST_HOTELS,
           hotels: hotels.data,
+          hotelsLoading: false,
         });
       })
       .catch(error => {
         return dispatch({
           type: LIST_HOTELS_ERROR,
-          message: error.error.message
+          message: error.error.message,
+          hotelsLoading: false,
         });
       });
   }

@@ -5,20 +5,12 @@ import './FilterRange.css';
 
 const WrapperFilter = styled.div`
   width: 100%;
+  margin-top: 39px;
   @media (mix-width: 570px) {
     max-width: 300px;
   }
 `;
-const FilterTitle = styled.div`
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  line-height: normal;
-  font-size: 22px;
-  letter-spacing: 2.5px;
-  color: #000000;
-  margin-bottom: 39px;
-`;
+
 const TextSmall = styled.div`
   font-family: 'Heebo', sans-serif;
   font-style: normal;
@@ -55,7 +47,6 @@ const FilterValueTextPrice = styled.div`
   letter-spacing: 2.5px;
   color: rgba(249, 129, 0, 0.467816);
 `;
-
 export default class WrapperFilterRange extends Component {
   constructor(props) {
     super(props);
@@ -66,8 +57,8 @@ export default class WrapperFilterRange extends Component {
     return {
       min: 100,
       max: 1000,
-      minPrice: 100,
-      maxPrice: 930,
+      minPrice: this.props.minPrice,
+      maxPrice: this.props.maxPrice,
     }
   }
 
@@ -79,9 +70,6 @@ export default class WrapperFilterRange extends Component {
   render() {
     return(
       <WrapperFilter>
-        <FilterTitle>
-          Filters
-        </FilterTitle>
         <FilterRange>
           <TextSmall>
             Price Range
