@@ -2,18 +2,13 @@
 
 exports[`FilterRange Should match with snapshot 1`] = `
 <div
-  className="sc-bdVaJa fcWAVe"
+  className="sc-bdVaJa tsCoj"
 >
   <div
-    className="sc-bwzfXH hooEMH"
-  >
-    Filters
-  </div>
-  <div
-    className="sc-bxivhb bUZGRr"
+    className="sc-htpNat KtFsv"
   >
     <div
-      className="sc-htpNat hctOzp"
+      className="sc-bwzfXH iGTVFs"
     >
       Price Range
     </div>
@@ -31,9 +26,9 @@ exports[`FilterRange Should match with snapshot 1`] = `
       />
       <button
         aria-disabled={false}
-        aria-valuemax={930}
+        aria-valuemax={1000}
         aria-valuemin={100}
-        aria-valuenow={100}
+        aria-valuenow={undefined}
         className="rheostat-handle"
         data-handle-key={0}
         onClick={undefined}
@@ -43,7 +38,7 @@ exports[`FilterRange Should match with snapshot 1`] = `
         role="slider"
         style={
           Object {
-            "left": "0%",
+            "left": "NaN%",
             "position": "absolute",
           }
         }
@@ -54,7 +49,7 @@ exports[`FilterRange Should match with snapshot 1`] = `
         aria-disabled={false}
         aria-valuemax={1000}
         aria-valuemin={100}
-        aria-valuenow={930}
+        aria-valuenow={undefined}
         className="rheostat-handle"
         data-handle-key={1}
         onClick={undefined}
@@ -64,7 +59,7 @@ exports[`FilterRange Should match with snapshot 1`] = `
         role="slider"
         style={
           Object {
-            "left": "92.22222222222223%",
+            "left": "NaN%",
             "position": "absolute",
           }
         }
@@ -75,43 +70,41 @@ exports[`FilterRange Should match with snapshot 1`] = `
         className="rheostat-progress"
         style={
           Object {
-            "left": "0%",
-            "width": "92.22222222222223%",
+            "left": "NaN%",
+            "width": "NaN%",
           }
         }
       />
     </div>
     <div
-      className="sc-ifAKCX bLhXGI"
+      className="sc-bxivhb bCEIsr"
     >
       <div
-        className="sc-EHOje kLbaUi"
+        className="sc-ifAKCX TiiUY"
       >
         <div
-          className="sc-bZQynM etZCOS"
+          className="sc-EHOje jAnwVP"
         >
           Min
         </div>
         <div
-          className="sc-gzVnrw flafmp"
+          className="sc-bZQynM klfGCS"
         >
           $
-          100
         </div>
       </div>
       <div
-        className="sc-EHOje dhYIww"
+        className="sc-ifAKCX gENqNG"
       >
         <div
-          className="sc-bZQynM etZCOS"
+          className="sc-EHOje jAnwVP"
         >
           Max
         </div>
         <div
-          className="sc-gzVnrw flafmp"
+          className="sc-bZQynM klfGCS"
         >
           $
-          930
         </div>
       </div>
     </div>

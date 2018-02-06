@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LayoutWrapperFilters Should match with snapshot 1`] = `
+<div
+  className="sc-bwzfXH hALXVQ"
+>
+  <div
+    className="sc-bdVaJa cGaDCQ"
+    onClick={[Function]}
+  >
+    Filters
+  </div>
+  <div
+    className="sc-htpNat gPdQJU"
+  >
+     
+  </div>
+</div>
+`;

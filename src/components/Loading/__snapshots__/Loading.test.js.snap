@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading components Loadable Should match with snapshot 1`] = `[Function]`;
+
+exports[`Loading components Loadable Should match with snapshot 2`] = `
+<loadingBar>
+  <img
+    alt="loading..."
+    className="img-loading"
+    src="loading-icon.svg"
+  />
+</loadingBar>
+`;
