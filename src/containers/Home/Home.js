@@ -15,19 +15,12 @@ import {
   updateFilterRate,
   fetchHotels,
 } from '../../modules/hotels';
-
 import HeaderNavigation from '../../components/HeaderNavigation/HeaderNavigation';
+import Hero from '../../components/Hero/Hero';
 import BoxTitle, { BoxMessage } from '../../components/BoxTitle/BoxTitle';
+import BoxCalendar from '../../components/BoxCalendar/BoxCalendar';
+import Calendar from '../../components/Calendar/Calendar';
 
-const Hero = LoadableWrapper({
-  loader: () => import(/*webpackChunkName: "Hero"*/'../../components/Hero/Hero'),
-});
-const BoxCalendar = LoadableWrapper({
-  loader: () => import(/*webpackChunkName: "BoxCalendar"*/'../../components/BoxCalendar/BoxCalendar'),
-});
-const Calendar = LoadableWrapper({
-  loader: () => import(/*webpackChunkName: "Calendar"*/'../../components/Calendar/Calendar'),
-});
 const FilterRange = LoadableWrapper({
   loader: () => import(/*webpackChunkName: "FilterRange"*/'../../components/FilterRange/FilterRange'),
 });
@@ -54,7 +47,7 @@ const formatDate = (dateIso) => {
 }
 
 const HomePage = (props) => {
-  console.log('HomePage ', props.errorMessage);
+  
   return(
     <Layout>
       <HeaderNavigation></HeaderNavigation>
