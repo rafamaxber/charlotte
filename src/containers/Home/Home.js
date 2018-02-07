@@ -64,9 +64,6 @@ const HomePage = (props) => {
         ></Calendar>
       </BoxCalendar>
       {
-        console.log('\n\nstatus ===>>', props.hotelsLoading)
-      }
-      {
         props.hotels &&
         <LayoutContainerWrapperListHotels>
           {
