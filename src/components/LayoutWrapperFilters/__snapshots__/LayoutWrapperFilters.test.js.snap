@@ -6,14 +6,11 @@ exports[`LayoutWrapperFilters Should match with snapshot 1`] = `
 >
   <div
     className="sc-bdVaJa cGaDCQ"
-    onClick={[Function]}
   >
     Filters
   </div>
   <div
     className="sc-htpNat gPdQJU"
-  >
-     
-  </div>
+  />
 </div>
 `;

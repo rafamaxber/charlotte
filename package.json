@@ -27,8 +27,8 @@
     "styled-components": "^2.1.2"
   },
   "scripts": {
-    "start": "concurrently \" npm run dev\" \" npm run storybook\"",
-    "dev": "react-scripts start --env=development.local.env",
+    "start": "react-scripts start --env=development.local.env",
+    "dev": "yarn storybook && yarn test:tdd && yarn start",
     "test": "react-scripts test --env=jsdom",
     "test:tdd": "npm run lint && npm test",
     "test:coverage": "npm test -- --coverage",

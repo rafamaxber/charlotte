@@ -115,7 +115,7 @@ const HomePage = (props) => {
                 </div>                  
               }
               {
-                (props.hotels.length === 0) &&
+                (props.hotels.length === 0 && !props.hotelsLoading) &&
                 <BoxMessage>
                   Sorry, we did not find the hotel you were looking for :(
                 </BoxMessage>

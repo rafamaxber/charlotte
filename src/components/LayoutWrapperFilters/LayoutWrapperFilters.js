@@ -39,6 +39,29 @@ const WrapperFilterBoxMobile = styled.div`
   
 `; 
 
+
+function setMobileComponent(showMobile, children, toogleFiltersWhenMobile) {
+  return (
+    <WrapperFilters>
+      <FilterTitle onClick={() => toogleFiltersWhenMobile()}>
+        Filter by
+      </FilterTitle>
+      <WrapperFilterBoxMobile> {showMobile && children} </WrapperFilterBoxMobile>
+    </WrapperFilters >
+  );
+}
+
+function setDesktopComponent(children) {
+  return (
+    <WrapperFilters>
+      <FilterTitle>
+        Filters
+      </FilterTitle>
+      <WrapperFilterBox>{children}</WrapperFilterBox>
+    </WrapperFilters >
+  );
+}
+
 export default class LayoutWrapperFilters extends PureComponent {
   constructor(props) {
     super(props);
@@ -50,23 +73,13 @@ export default class LayoutWrapperFilters extends PureComponent {
   }
 
   toogleFiltersWhenMobile() {
-    if (this.state.isMobile) {
-      this.setState({ showMobile: !this.state.showMobile });
-    }
+    this.setState({ showMobile: !this.state.showMobile });
   }
 
   render() {
-    return(
-      <WrapperFilters>
-        <FilterTitle onClick={() => this.toogleFiltersWhenMobile()}>
-          Filters
-        </FilterTitle>
-        {
-          this.state.isMobile ?
-            <WrapperFilterBoxMobile> {this.state.showMobile && this.props.children } </WrapperFilterBoxMobile> :
-          <WrapperFilterBox> {this.props.children }</WrapperFilterBox>
-        }
-      </WrapperFilters >
-    );
+    if (this.state.isMobile) {
+      return setMobileComponent(this.state.showMobile, this.props.children, this.toogleFiltersWhenMobile.bind(this));
+    } 
+    return setDesktopComponent(this.props.children);
   }
 };
