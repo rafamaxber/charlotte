@@ -1,6 +1,9 @@
 language: node_js
 node_js:
   - '8'
+env:
+  global:
+    - REACT_APP_API_URL="https://charlotteapp-api.herokuapp.com"
 branches:
   only:
     - master
