@@ -35,7 +35,7 @@
     "lint": "./node_modules/.bin/eslint src/*.js",
     "storybook": "start-storybook -p 9001 -c storybook",
     "build": "react-scripts build",
-    "test:e2e": "jest e2e.js",
+    "test:e2e": "jest e2e.test.js",
     "eject": "react-scripts eject"
   },
   "devDependencies": {

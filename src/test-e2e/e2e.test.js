@@ -1,14 +1,16 @@
-import Nightmare from 'nightmare';
+const Nightmare = require('nightmare');
 const nightmare = Nightmare({ show: true });
 
-nightmare
-  .goto('https://duckduckgo.com')
-  .type('#search_form_input_homepage', 'github nightmare')
-  .click('#search_button_homepage')
-  .wait('#r1-0 a.result__a')
-  .evaluate(() => document.querySelector('#r1-0 a.result__a').href)
-  .end()
-  .then(console.log)
-  .catch((error) => {
-    console.error('Search failed:', error);
+describe('Integration test to Charlotte', () => {
+  it('Select Calendar', () => {
+    nightmare
+      .goto('http://charlotteapp.herokuapp.com/')
+      .click('.DayPicker-Day[tabindex="-1"]')
+      .wait(5000)
+      .end()
+      .then(console.log)
+      .catch((error) => {
+        console.error('Search failed:', error);
+      });
   });
+});
