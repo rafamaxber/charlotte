@@ -5,7 +5,7 @@ exports[`Footer Should match with snapshot 1`] = `
   className="sc-bdVaJa cpfJLt"
 >
   <div
-    className="sc-htpNat gHlAWw"
+    className="sc-htpNat hQrHps"
   >
     <a
       className="sc-bxivhb yVKca"
@@ -36,7 +36,7 @@ exports[`Footer Should match with snapshot 1`] = `
     </a>
   </div>
   <small
-    className="sc-bwzfXH fHSaSV"
+    className="sc-bwzfXH dwBvlj"
   >
     © 2004-2018 Visit Charlotte. All Rights Reserved. 500 S. College Street, Suite 300, Charlotte, NC 28202
   </small>

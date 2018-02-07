@@ -2,6 +2,6 @@
 
 exports[`Layout Should match with snapshot 1`] = `
 <main
-  className="sc-bdVaJa uWGdE"
+  className="sc-bdVaJa dFbCnz"
 />
 `;

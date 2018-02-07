@@ -3,6 +3,7 @@ import moment from 'moment';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import LoadableWrapper from '../../components/Loading/Loadable';
+import Loading from '../../components/Loading/Loading';
 import Layout, {
   LayoutContainerWrapperListHotels,
   LayoutWrapperListHotels,
@@ -47,7 +48,6 @@ const formatDate = (dateIso) => {
 }
 
 const HomePage = (props) => {
-  
   return(
     <Layout>
       <HeaderNavigation></HeaderNavigation>
@@ -68,12 +68,15 @@ const HomePage = (props) => {
       }
       {
         props.hotels &&
-        <LayoutContainerWrapperListHotels >
-          <BoxTitle>
-            Best choices between {formatDate(props.startDate)} and {formatDate(props.endDate)}
-          </BoxTitle>
-            
+        <LayoutContainerWrapperListHotels>
+          {
+            props.endDate ?
+              <BoxTitle>
+                Best choices between {formatDate(props.startDate)} and {formatDate(props.endDate)}
+              </BoxTitle> : ''
+          }
           <LayoutWrapperListHotels>
+
             <LayoutWrapperFilters>
               <FilterRange
                 minPrice={props.minPrice}
@@ -89,21 +92,27 @@ const HomePage = (props) => {
                 afterUpdatedRate={props.fetchHotels}
               ></FilterRate>
             </LayoutWrapperFilters>
+
             <LayoutWrapperCards
-              loading={props.hotelsLoading}
-              >
+              loading={props.hotelsLoading}>
               {
-                props.hotels.map(item => (
-                  <Card
-                    key={item.name}
-                    image={item.image}
-                    title={item.name}
-                    description={item.description}
-                    price={item.price}
-                    price_history={item.price_history}
-                    rate={item.rate}
-                  ></Card>
-                ))
+              props.hotelsLoading ?
+                <Loading></Loading> :
+                <div>
+                  {
+                    props.hotels.map(item => (
+                      <Card
+                        key={item.name}
+                        image={item.image}
+                        title={item.name}
+                        description={item.description}
+                        price={item.price}
+                        price_history={item.price_history}
+                        rate={item.rate}
+                      ></Card>
+                    ))
+                  }
+                </div>                  
               }
               {
                 (props.hotels.length === 0) &&
@@ -112,6 +121,7 @@ const HomePage = (props) => {
                 </BoxMessage>
               }
             </LayoutWrapperCards>
+
           </LayoutWrapperListHotels>
         </LayoutContainerWrapperListHotels>
       }

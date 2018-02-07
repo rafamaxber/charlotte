@@ -18,10 +18,16 @@ const SmallText = styled.small`
   font-size: 12px;
   color: #B5B5B5;
   display: block;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
+  @media (min-width: 600px) {
+    padding-bottom: 40px;
+  }
 `;
 const WrapperIcons = styled.div`
-  padding: 40px 0 30px;
+  padding: 20px;
+  @media (min-width: 600px) {
+    padding: 40px 0 30px;
+  }
 `;
 const Icon = styled.a`
   display: inline-block;

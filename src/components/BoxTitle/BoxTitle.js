@@ -13,11 +13,16 @@ const Title = styled.div`
   font-style: normal;
   font-weight: normal;
   line-height: normal;
-  font-size: 22px;
   text-align: center;
   letter-spacing: 2.5px;
   color: #000000;
   display: block;
+  font-size: 17px;
+  padding: 0 20px;
+  @media (min-width: 570px) {
+    padding: 0 0 0 0;
+    font-size: 22px;
+  }
 `;
 
 const Message = Title.extend`

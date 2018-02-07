@@ -8,6 +8,7 @@ exports[`Hero Should match with snapshot 1`] = `
     className="sc-bwzfXH XkbQO"
   >
     <img
+      alt="The white crown"
       className="sc-htpNat hjVsta"
       src="crown.svg"
     />

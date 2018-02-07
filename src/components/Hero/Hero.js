@@ -94,7 +94,11 @@ const CharlotteText = styled.div`
 export default () => (
   <Hero>
     <WrapperText>
-      <Crown src={crownwhite} />
+      < Crown src = {
+        crownwhite
+      }
+      alt="The white crown" / >
+
       <Text>
         Welcome to
       </Text>
