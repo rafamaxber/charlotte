@@ -26,7 +26,7 @@ const ContainerWrapperListHotels = MainPage.extend`
 const WrapperCards = styled.div`
   width: 100%;
   @media (min-width: 570px) {  
-    width: 900px;
+    width: 75%;
   }
 `;
 

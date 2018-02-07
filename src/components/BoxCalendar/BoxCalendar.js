@@ -78,7 +78,7 @@ const WrapperBox = styled.div`
   }
 `;
 
-const dateTranslate = (dateIso) => {
+const formatDate = (dateIso) => {
   if (dateIso) {
     const utcDate = dateIso.toUTCString();
     return (
@@ -106,7 +106,7 @@ export default ({ children, startDate, endDate, fetchHotels}) => (
             CHECK-IN
           </BoxDateTitle>
           <BoxDateValue>
-            { dateTranslate(startDate) || `Choose a date` } 
+            { formatDate(startDate) || `Choose a date` } 
           </BoxDateValue>
         </BoxDate>
 
@@ -115,12 +115,12 @@ export default ({ children, startDate, endDate, fetchHotels}) => (
             CHECK-OUT
           </BoxDateTitle>
           <BoxDateValue>
-            {dateTranslate(endDate) || `Choose a date`} 
+            {formatDate(endDate) || `Choose a date`} 
           </BoxDateValue>
         </BoxDate>
 
         <Button typeBtn="default" size="default" action={fetchHotels}>
-          Search hotels
+          <span data-ele="search-hotels">Search hotels</span>
         </Button>
 
       </WrapperBoxDate>

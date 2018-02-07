@@ -51,7 +51,11 @@ exports[`BoxCalendar Should match with snapshot 1`] = `
         className="sc-bdVaJa fxfHPe"
         onClick={undefined}
       >
-        Search hotels
+        <span
+          data-ele="search-hotels"
+        >
+          Search hotels
+        </span>
       </a>
     </div>
     <div

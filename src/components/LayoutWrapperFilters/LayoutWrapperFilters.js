@@ -16,7 +16,7 @@ const FilterTitle = styled.div`
 const WrapperFilters = styled.div`
   width: 100%;
   @media (min-width: 570px) {
-    width: 300px;
+    width: 25%;
   }
   @media (max-width: 570px) {
     width: 96%;
